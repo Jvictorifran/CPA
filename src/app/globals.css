@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ─── Design Tokens ─── */
+:root {
+  /* Colors */
+  --cpa-green-900: #0d2e1f;
+  --cpa-green-800: #123a2f;
+  --cpa-green-700: #1a5240;
+  --cpa-green-600: #1f6b4f;
+  --cpa-green-500: #27875f;
+  --cpa-green-400: #38a169;
+  --cpa-green-300: #5cb97e;
+  --cpa-green-200: #8ed4a2;
+  --cpa-green-100: #c6ecd3;
+  --cpa-green-50: #eaf7ef;
+
+  /* Neutrals */
+  --cpa-white: #ffffff;
+  --cpa-gray-50: #f8faf9;
+  --cpa-gray-100: #f1f3f2;
+  --cpa-gray-200: #e2e5e3;
+  --cpa-gray-300: #c9ceca;
+  --cpa-gray-400: #9ca39e;
+  --cpa-gray-500: #6b756d;
+  --cpa-gray-600: #4a524c;
+  --cpa-gray-700: #333a35;
+  --cpa-gray-800: #1e2420;
+  --cpa-gray-900: #0f1720;
+
+  /* Semantic */
+  --background: var(--cpa-white);
+  --foreground: var(--cpa-gray-900);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* CPA Brand palette */
+  --color-cpa-900: var(--cpa-green-900);
+  --color-cpa-800: var(--cpa-green-800);
+  --color-cpa-700: var(--cpa-green-700);
+  --color-cpa-600: var(--cpa-green-600);
+  --color-cpa-500: var(--cpa-green-500);
+  --color-cpa-400: var(--cpa-green-400);
+  --color-cpa-300: var(--cpa-green-300);
+  --color-cpa-200: var(--cpa-green-200);
+  --color-cpa-100: var(--cpa-green-100);
+  --color-cpa-50: var(--cpa-green-50);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Focus Visible ─── */
+*:focus-visible {
+  outline: 2px solid var(--cpa-green-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scroll Animations ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(56, 161, 105, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(56, 161, 105, 0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.7s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.7s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ─── Utility ─── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
