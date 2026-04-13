@@ -7,11 +7,10 @@ export default function Footer() {
       <div className="border-b border-cpa-800">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Pronto para transformar seus resultados?
+            O seu próximo recorde de produtividade começa com um bom plano.
           </h2>
           <p className="mt-3 text-cpa-300 text-lg max-w-xl mx-auto">
-            Entre em contato e descubra como a CPA pode impulsionar a
-            produtividade da sua propriedade.
+            Deixe a incerteza para trás. Junte-se aos produtores que já profissionalizaram sua gestão com a CPA e colha resultados acima da média.
           </p>
           <a
             href="mailto:contato@cpa-agro.com.br"
@@ -19,7 +18,7 @@ export default function Footer() {
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-cpa-400 px-8 py-4 text-base font-semibold text-white
               shadow-lg shadow-cpa-400/25 transition-all duration-300 hover:bg-cpa-300 hover:shadow-xl hover:-translate-y-0.5"
           >
-            Solicitar Consultoria
+            Falar com um consultor agora
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
@@ -64,7 +63,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                 </svg>
                 <a href="tel:+5500000000000" className="hover:text-white transition-colors">
-                  (00) 0000-0000
+                  (67) 3422-8119
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -72,7 +71,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
-                <span>Brasil</span>
+                <span>R. Ponta Porã, 1900 - Jardim America, Dourados - MS, 79824-130</span>
               </li>
             </ul>
           </div>
@@ -85,7 +84,7 @@ export default function Footer() {
             <div className="flex gap-3">
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/cpaconsultoriaeplanejamento?igsh=MXIxOGFvbnVkdzR3cg=="
                 aria-label="Instagram da CPA"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-cpa-800 text-cpa-300
                   transition-all duration-300 hover:bg-cpa-400 hover:text-white hover:scale-110"

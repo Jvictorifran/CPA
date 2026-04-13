@@ -59,9 +59,9 @@ export default function Hero() {
               data-animate
               className="opacity-0 delay-100 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
             >
-              Soluções que fazem o{" "}
+              Transformando dados do campo em {" "}
               <span className="relative">
-                <span className="relative z-10 text-cpa-700">campo crescer</span>
+                <span className="relative z-10 text-cpa-700">rentabilidade real.</span>
                 <span className="absolute bottom-1 left-0 right-0 z-0 h-3 bg-cpa-100 rounded-sm" />
               </span>
             </h1>
@@ -70,8 +70,7 @@ export default function Hero() {
               data-animate
               className="opacity-0 delay-200 mt-6 text-lg leading-relaxed text-gray-500 md:text-xl"
             >
-              Desde 2007 desenvolvendo as melhores soluções para custeio
-              agrícola e aumento da produtividade do seu plantio.
+              Na CPA, unimos tecnologia de ponta e expertise técnica para planejar cada hectare da sua propriedade. Onde você vê terra, nós enxergamos o máximo potencial produtivo.
             </p>
 
             {/* CTAs */}
@@ -86,7 +85,7 @@ export default function Hero() {
                   transition-all duration-300 hover:bg-cpa-600 hover:shadow-xl hover:shadow-cpa-600/30 hover:-translate-y-0.5
                   animate-pulse-glow"
               >
-                Solicitar Consultoria
+                Quero uma consultoria especializada
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
