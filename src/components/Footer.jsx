@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -12,8 +14,8 @@ export default function Footer() {
           <p className="mt-3 text-cpa-300 text-lg max-w-xl mx-auto">
             Deixe a incerteza para trás. Junte-se aos produtores que já profissionalizaram sua gestão com a CPA e colha resultados acima da média.
           </p>
-          <a
-            href="mailto:contato@cpa-agro.com.br"
+          <button
+            onClick={() => document.getElementById('contact-modal')?.showModal()}
             id="cta-footer"
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-cpa-400 px-8 py-4 text-base font-semibold text-white
               shadow-lg shadow-cpa-400/25 transition-all duration-300 hover:bg-cpa-300 hover:shadow-xl hover:-translate-y-0.5"
@@ -22,7 +24,7 @@ export default function Footer() {
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
 

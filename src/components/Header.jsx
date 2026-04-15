@@ -54,15 +54,15 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contato"
+          <button
+            onClick={() => document.getElementById('contact-modal')?.showModal()}
             id="cta-header"
             className="rounded-lg bg-cpa-700 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-cpa-700/20
               transition-all duration-300 hover:bg-cpa-600 hover:shadow-lg hover:shadow-cpa-600/30 hover:-translate-y-0.5
               focus-visible:ring-2 focus-visible:ring-cpa-400 focus-visible:ring-offset-2"
           >
             Solicitar Consultoria
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -111,14 +111,16 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contato"
-            onClick={() => setMenuOpen(false)}
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+              document.getElementById('contact-modal')?.showModal();
+            }}
             className="mt-2 rounded-lg bg-cpa-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md
               transition-all hover:bg-cpa-600"
           >
             Solicitar Consultoria
-          </a>
+          </button>
         </div>
       </nav>
     </header>

@@ -78,8 +78,8 @@ export default function Hero() {
               data-animate
               className="opacity-0 delay-300 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
-              <a
-                href="#contato"
+              <button
+                onClick={() => document.getElementById('contact-modal')?.showModal()}
                 id="cta-hero-primary"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-cpa-700 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-cpa-700/25
                   transition-all duration-300 hover:bg-cpa-600 hover:shadow-xl hover:shadow-cpa-600/30 hover:-translate-y-0.5
@@ -89,7 +89,7 @@ export default function Hero() {
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
-              </a>
+              </button>
               <a
                 href="#servicos"
                 id="cta-hero-secondary"

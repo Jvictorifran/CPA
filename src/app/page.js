@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Plantacao3D from "@/components/Plantacao3D";
+import ContactModal from "@/components/ContactModal";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         {/* <Plantacao3D /> */}
       </main>
       <Footer />
+      <ContactModal />
     </>
   );
 }
