@@ -88,7 +88,7 @@ export default function ContactModal() {
 
           {/* Email */}
           <a
-            href="mailto:contato@cpa-agro.com.br"
+            href="mailto:cpadourados@hotmail.com"
             className="flex items-center gap-4 w-full p-4 rounded-xl border border-gray-200 bg-white hover:border-cpa-600 hover:bg-cpa-50 transition-all shadow-sm group"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cpa-100 text-cpa-700 group-hover:bg-cpa-600 group-hover:text-white transition-colors">
