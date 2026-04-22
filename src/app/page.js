@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
-import Plantacao3D from "@/components/Plantacao3D";
+// import Plantacao3D from "@/components/Plantacao3D";
 import ContactModal from "@/components/ContactModal";
 
 export default function HomePage() {

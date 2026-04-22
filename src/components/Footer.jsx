@@ -119,7 +119,8 @@ export default function Footer() {
               </a>
               {/* WhatsApp */}
               <a
-                href="#"
+                target="_blank"
+                href="https://wa.me/5567998050521"
                 aria-label="WhatsApp da CPA"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-cpa-800 text-cpa-300
                   transition-all duration-300 hover:bg-cpa-400 hover:text-white hover:scale-110"
