@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -79,8 +80,11 @@ export default function Hero() {
               data-animate
               className="opacity-0 delay-300 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
-              <a
-                href="#contato"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent("open-contact-modal"));
+                }}
                 id="cta-hero-primary"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-cpa-700 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-cpa-700/25
                   transition-all duration-300 hover:bg-cpa-600 hover:shadow-xl hover:shadow-cpa-600/30 hover:-translate-y-0.5
@@ -90,7 +94,7 @@ export default function Hero() {
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
-              </a>
+              </button>
               <a
                 href="#servicos"
                 id="cta-hero-secondary"
@@ -110,7 +114,7 @@ export default function Hero() {
               className="opacity-0 delay-400 mt-12 flex items-center gap-8 border-t border-gray-100 pt-8"
             >
               <div className="text-center">
-                <p className="text-2xl font-bold text-cpa-700">18+</p>
+                <p className="text-2xl font-bold text-cpa-700">19+</p>
                 <p className="text-xs text-gray-400 font-medium">Anos de experiência</p>
               </div>
               <div className="h-8 w-px bg-gray-200" />
@@ -129,17 +133,16 @@ export default function Hero() {
           {/* Hero Image */}
           <div
             data-animate
-            className="opacity-0 delay-200 relative"
+            className="opacity-0 delay-200 relative self-start"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cpa-900/10">
-              {/* Placeholder image — replace with actual client photo */}
-              <img
-                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80"
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cpa-900/10 w-full aspect-[4/3]">
+              <Image
+                src="/assets/imagens/hero.jpeg"
                 alt="Vista aérea de plantação agrícola com fileiras verdes — Representação da consultoria CPA"
-                className="w-full h-auto aspect-[4/3] object-cover"
-                loading="eager"
-                width={800}
-                height={600}
+                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-cpa-900/20 via-transparent to-transparent" />

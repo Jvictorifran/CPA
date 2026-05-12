@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const BENEFITS = [
   {
@@ -21,7 +22,7 @@ const BENEFITS = [
     ),
     title: "Equipe Especializada",
     description:
-      "Profissionais com formação em agronomia, economia e administração rural, prontos para atender suas demandas.",
+      "Profissionais com formação em agronomia, prontos para atender suas demandas.",
   },
   {
     icon: (
@@ -61,14 +62,13 @@ export default function About() {
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
           {/* Image side */}
           <div data-animate className="opacity-0 relative order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=700&h=500&fit=crop&q=80"
+            <div className="relative rounded-2xl overflow-hidden shadow-xl w-full aspect-[7/5]">
+              <Image
+                src="/assets/imagens/campo.jpeg"
                 alt="Reunião de consultores agrícolas analisando dados de produção e planejamento"
-                className="w-full h-auto aspect-[7/5] object-cover"
-                loading="lazy"
-                width={700}
-                height={500}
+                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-cpa-900/15 via-transparent to-transparent" />
             </div>
