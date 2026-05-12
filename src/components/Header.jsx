@@ -34,11 +34,10 @@ export default function Header() {
         <a href="#home" className="flex items-center gap-3 group" aria-label="CPA - Página inicial">
           <Image
             src="/assets/logo.png"
-            alt="CPA — Consultoria e Planejamento em Agronegócio"
-            width={160}
-            height={52}
+            alt="CPA — Consultoria e Planejamento em Agroneg" width={160} height={52}
             className="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-105"
-            priority
+            priority={true}
+            loading="eager"
           />
         </a>
 
@@ -54,15 +53,18 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contato"
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new CustomEvent("open-contact-modal"));
+            }}
             id="cta-header"
             className="rounded-lg bg-cpa-700 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-cpa-700/20
               transition-all duration-300 hover:bg-cpa-600 hover:shadow-lg hover:shadow-cpa-600/30 hover:-translate-y-0.5
               focus-visible:ring-2 focus-visible:ring-cpa-400 focus-visible:ring-offset-2"
           >
             Solicitar Consultoria
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -111,14 +113,17 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contato"
-            onClick={() => setMenuOpen(false)}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              window.dispatchEvent(new CustomEvent("open-contact-modal"));
+            }}
             className="mt-2 rounded-lg bg-cpa-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md
               transition-all hover:bg-cpa-600"
           >
             Solicitar Consultoria
-          </a>
+          </button>
         </div>
       </nav>
     </header>
